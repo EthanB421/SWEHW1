@@ -19,16 +19,18 @@ public class editorTest {
         doc1.addChar('D', "Calibri", "Green", 18);
         doc1.save("test_document.txt");
 
+        Document doc2 = new Document();
+        doc2.load("test_document.txt");
 
-        assertEquals(2, doc1.getCharacters().size());
-        assertEquals('C', doc1.getCharacters().get(0).getCharacter());
-        assertEquals("Arial", doc1.getCharacters().get(0).getFont().getFont());
-        assertEquals("Blue", doc1.getCharacters().get(0).getColor().getColor());
-        assertEquals(16, doc1.getCharacters().get(0).getSize().getSize());
-        assertEquals('D', doc1.getCharacters().get(1).getCharacter());
-        assertEquals("Calibri", doc1.getCharacters().get(1).getFont().getFont());
-        assertEquals("Green", doc1.getCharacters().get(1).getColor().getColor());
-        assertEquals(18, doc1.getCharacters().get(1).getSize().getSize());
+        assertEquals(2, doc2.getCharacters().size());
+        assertEquals('C', doc2.getCharacters().get(0).getCharacter());
+        assertEquals("Arial", doc2.getCharacters().get(0).getFont().getFont());
+        assertEquals("Blue", doc2.getCharacters().get(0).getColor().getColor());
+        assertEquals(16, doc2.getCharacters().get(0).getSize().getSize());
+        assertEquals('D', doc2.getCharacters().get(1).getCharacter());
+        assertEquals("Calibri", doc2.getCharacters().get(1).getFont().getFont());
+        assertEquals("Green", doc2.getCharacters().get(1).getColor().getColor());
+        assertEquals(18, doc2.getCharacters().get(1).getSize().getSize());
     }
 
     @Test

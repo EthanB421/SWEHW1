@@ -12,6 +12,8 @@ public static void main(String[] args) {
 
     doc1.save("example1.txt");
 
-    doc1.print();
+    Document doc2 = new Document();
+    doc2.load("example1.txt");
+    doc2.print();
     }
 }
