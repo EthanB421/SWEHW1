@@ -6,7 +6,7 @@ public class VendingMachine {
     private ArrayList<Snack> snacks;
     private StateOfVendingMachine state;
     private SnackDispenseHandler snackDispenser;
-    private double funds;
+    double funds;
 
     public VendingMachine(ArrayList<Snack> snacks)
     {
